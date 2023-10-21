@@ -26,10 +26,10 @@ int main() {
 		int Bag = B;
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < M; j++) {
-				//if (ans!=-1 && time >= ans) {
+				if (ans!=-1 && time >= ans) {
 					//cout << ans << ' ' << ansh; 
 					//return 0;
-				//}
+				}
 				int abso = abs(land[i][j] - h);
 				if (land[i][j] < h) {
 					Bag -= abso;
