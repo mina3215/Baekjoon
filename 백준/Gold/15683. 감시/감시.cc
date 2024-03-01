@@ -37,6 +37,7 @@ void find_MinNum(int n, int _board[8][8]) {
 		min_cnt = min(min_cnt, cnt);
 		return ;
 	}
+
 	int n_board[8][8];
 
 	int y = CCTV[n].first;
@@ -44,10 +45,10 @@ void find_MinNum(int n, int _board[8][8]) {
 
 	int v = board[y][x];
 
-	
+
 	for (int dir = 0;dir < 4;dir++) {
 		copy(&_board[0][0], &_board[0][0] + 8 * 8, &n_board[0][0]);
-		if (v== 1) {
+		if (v == 1) {
 			updateBoard(dir, y, x, n_board);
 		}
 		else if (v == 2) {
@@ -84,7 +85,7 @@ int main() {
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < M; j++) {
 			cin >> board[i][j];
-			if ( board[i][j] >= 1 && board[i][j] <= 5)
+			if (board[i][j] >=1 && board[i][j] <= 5)
 				CCTV.push_back({ i,j });
 		}
 	}
